@@ -21,8 +21,6 @@ public class StandAloneTest {
          *
          */
 
-        //Main Java we will use to store all reusable utilities, page object files later in this section.
-
         String productName = "ZARA COAT 3";
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
