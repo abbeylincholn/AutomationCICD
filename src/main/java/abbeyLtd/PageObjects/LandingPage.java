@@ -34,8 +34,6 @@ public class LandingPage extends AbstractComponent {
     WebElement errorMsg;
 
 
-
-
     public ProductCatalogue loginApplication(String username, String password) {
         userEmail.sendKeys(username);
         userPassword.sendKeys(password);

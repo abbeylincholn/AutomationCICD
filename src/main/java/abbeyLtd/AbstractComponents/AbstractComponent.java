@@ -21,18 +21,18 @@ public class AbstractComponent {
      * The goal of a Page Object is to model a web page (or a component of it) as a class. This helps make tests cleaner, easier to maintain,
      * and more readable.     *
      * Here’s a simple outline of what a Page Object Class typically contains:     *
-     *     Locators for elements on the page (buttons, inputs, etc.)     *
-     *     Methods that perform actions on those elements (clicks, typing, etc.)     *
-     *     Optional Assertions for verifying page behavior.
+     * Locators for elements on the page (buttons, inputs, etc.)     *
+     * Methods that perform actions on those elements (clicks, typing, etc.)     *
+     * Optional Assertions for verifying page behavior.
      */
 
     WebDriver driver;
     WebDriverWait wait;
 
-    @FindBy (css = "[routerlink*='cart']")
+    @FindBy(css = "[routerlink*='cart']")
     WebElement cartHeader;
 
-    @FindBy (css = "[routerlink*='myorders']")
+    @FindBy(css = "[routerlink*='myorders']")
     WebElement orderHeader;
 
     public AbstractComponent(WebDriver driver) {
@@ -50,7 +50,7 @@ public class AbstractComponent {
     }
 
     public void waitForElementToDisappear(WebElement element) throws InterruptedException {
-      // wait.until(ExpectedConditions.invisibilityOf(element));
+        // wait.until(ExpectedConditions.invisibilityOf(element));
         Thread.sleep(1000);
     }
 
@@ -65,8 +65,6 @@ public class AbstractComponent {
         OrderPage orderPage = new OrderPage(driver);
         return orderPage;
     }
-
-
 
 
 }
