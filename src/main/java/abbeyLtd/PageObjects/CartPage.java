@@ -26,7 +26,7 @@ public class CartPage extends AbstractComponent {
 
     public boolean verifyProductDisplay(String productName) {
         boolean match = cartProducts.stream().anyMatch(product -> product.getText().equals(productName));
-        return match;
+        return match; 
     }
 
     public CheckoutPage goToCheckoutPage() {
